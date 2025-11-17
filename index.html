@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Your Dinosaur</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<script>
+  const video = document.querySelector(".dino-video");
+  video.addEventListener("ended", () => {
+    video.currentTime = 0;
+    video.play();
+  });
+</script>
+
+<body>
+  <div class="container">
+    <video class="dino-video" autoplay muted loop playsinline>
+      <source src="spinosaur.mp4" type="video/mp4">
+    </video>
+  </div>
+</body>
+</html>
